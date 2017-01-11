@@ -1,0 +1,57 @@
+﻿@model CrudMVC_FluentNhibernate.Models.Aluno
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhe do Aluno</h2>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Curso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Curso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sexo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCursoInicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCursoInicial)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.Id }, new { @class = "btn btn-primary" }) 
+    @Html.ActionLink("Voltar", "Index", "", new { @class = "btn btn-default" })
+</p>
